@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to my blog website</h1>
+  </header>
+  <main>
+    <section>
+      <article>
+        <h3>My Awesome Blog - 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolor, sed ipsa dolore reprehenderit quibusdam iure? Quasi amet culpa ipsam, inventore, nobis rerum iusto sequi commodi, porro perspiciatis quos. Iure!</p>
+      </article>
+      <article>
+        <h3>My Awesome Blog - 2</h3>
+        <p>Atque vel ex earum quod eius suscipit in vitae cumque aliquam corporis dolores est dignissimos quae mollitia quaerat recusandae minima, voluptates distinctio culpa labore et, quibusdam voluptatum sequi. Tenetur, consequatur.</p>
+      </article>
+      <article>
+        <h3>My Awesome Blog - 3</h3>
+        <p>Voluptas id sit inventore, culpa distinctio expedita. Corrupti voluptatum, ab laboriosam praesentium accusantium quas debitis aut aspernatur earum dolores veritatis. Odio voluptatem asperiores sunt odit minima modi, deleniti ab aliquam.</p>
+      </article>
+    </section>
+  </main>
+  <script>
+    // console.log(document.body)
+    const blogTitles = document.getElementsByTagName('h3');
+    for (const h3 of blogTitles) {
+      console.log(h3.innerText);
+    }
+  </script>
+</body>
+</html>
