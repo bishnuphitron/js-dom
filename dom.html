@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM</title>
+  <style>
+    /* #second-title{
+      background-color: rgb(235, 204, 182);
+    } */
+  </style>
 </head>
 <body>
   <header>
@@ -16,11 +21,11 @@
         <h3>My Awesome Blog - 1</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolor, sed ipsa dolore reprehenderit quibusdam iure? Quasi amet culpa ipsam, inventore, nobis rerum iusto sequi commodi, porro perspiciatis quos. Iure!</p>
       </article>
-      <article>
-        <h3>My Awesome Blog - 2</h3>
+      <article id="third-title">
+        <h3 id="second-title">My Awesome Blog - 2</h3>
         <p>Atque vel ex earum quod eius suscipit in vitae cumque aliquam corporis dolores est dignissimos quae mollitia quaerat recusandae minima, voluptates distinctio culpa labore et, quibusdam voluptatum sequi. Tenetur, consequatur.</p>
       </article>
-      <article>
+      <article id="fourth-title">
         <h3>My Awesome Blog - 3</h3>
         <p>Voluptas id sit inventore, culpa distinctio expedita. Corrupti voluptatum, ab laboriosam praesentium accusantium quas debitis aut aspernatur earum dolores veritatis. Odio voluptatem asperiores sunt odit minima modi, deleniti ab aliquam.</p>
       </article>
@@ -30,8 +35,17 @@
     // console.log(document.body)
     const blogTitles = document.getElementsByTagName('h3');
     for (const h3 of blogTitles) {
-      console.log(h3.innerText);
+      // console.log(h3.innerText);
     }
+
+    const secondTitle = document.getElementById('second-title');
+    secondTitle.style.textAlign = 'center';
+
+    const thirdTitle = document.getElementById('third-title');
+    thirdTitle.innerText = 'Title updated by JS';
+    thirdTitle.style.backgroundColor = 'salmon';
+    thirdTitle.style.padding = '10px';
+    thirdTitle.style.marginLeft = '10px';
   </script>
 </body>
 </html>
