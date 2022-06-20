@@ -23,7 +23,17 @@
     <h1>Welcome to my blog website</h1>
   </header>
   <main>
-    <section class="blogs">
+    <!-- blog section starts here -->
+    <section id="blogs" class="blogs">
+      <header>
+        <h2>Blog Lists</h2>
+        <ul id="blog-list">
+          <li>Blog-1</li>
+          <li>Blog-2</li>
+          <li>Blog-3</li>
+          <li>Blog-4</li>
+        </ul>
+      </header>
       <article class="blog">
         <h3>My Awesome Blog - 1</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolor, sed ipsa dolore reprehenderit quibusdam iure? Quasi amet culpa ipsam, inventore, nobis rerum iusto sequi commodi, porro perspiciatis quos. Iure!</p>
@@ -59,6 +69,41 @@
     thirdTitle.style.padding = '10px';
     thirdTitle.style.marginLeft = '10px';
 
+    // css selector
+    // const cssBlog = document.querySelectorAll('.blog');
+    // const cssBlog2 = document.querySelector('.blog');
+    // const cssBlog3 = document.querySelectorAll('p');
+    // const cssBlog4 = document.querySelectorAll('#second-blog p');
+    // console.log(cssBlog4);
+
+    // create & add element by using JS
+    // create the element
+    const li = document.createElement('li');
+    li.innerText = 'Blog-5';
+    // where to
+    const ul = document.getElementById('blog-list');
+    // append new element
+    ul.appendChild(li);
+
+    // add article
+    const article = document.createElement('article');
+    article.classList.add('blog');
+    /* 
+    const h3 = document.createElement('h3');
+    h3.innerText = 'My Awesome Blog - 5';
+    const p = document.createElement('p');
+    p.innerText = 'Voluptas id sit inventore, culpa distinctio expedita. Corrupti voluptatum, ab laboriosam praesentium accusantium quas debitis aut aspernatur earum dolores veritatis. Odio voluptatem asperiores sunt odit minima modi, deleniti ab aliquam.';
+    article.appendChild(h3);
+    article.appendChild(p); 
+    */
+    article.innerHTML = `
+      <h3>My Awesome Blog - 5</h3>
+      <p>Voluptas id sit inventore, culpa distinctio expedita. Corrupti voluptatum, ab laboriosam praesentium accusantium quas debitis aut aspernatur earum dolores veritatis. Odio voluptatem asperiores sunt odit minima modi, deleniti ab aliquam.</p>
+    `;
+    // parent of article
+    const blogSection = document.getElementById('blogs');
+    blogSection.appendChild(article);
+
     // explore getElementsByClassName
     const blogs = document.getElementsByClassName('blog');
     for (const blog of blogs) {
@@ -67,13 +112,6 @@
       blog.style.margin = '10px';
       blog.style.padding = '10px';
     }
-
-    // css selector
-    const cssBlog = document.querySelectorAll('.blog');
-    const cssBlog2 = document.querySelector('.blog');
-    const cssBlog3 = document.querySelectorAll('p');
-    const cssBlog4 = document.querySelectorAll('#second-blog p');
-    console.log(cssBlog4);
   </script>
 </body>
 </html>
